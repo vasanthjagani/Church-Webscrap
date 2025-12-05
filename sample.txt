@@ -1,0 +1,237 @@
+import React, { useState } from 'react';
+import { Globe, Search, Loader2, CheckCircle2, Tag, BarChart3, FileText, List, Code } from 'lucide-react';
+
+export default function WebsiteCategorizer() {
+  const [url, setUrl] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState(null);
+
+  const dummyData = {
+    "url": "https://www.donboscochennai.org",
+    "title": "Salesian Province of Chennai (INM)",
+    "meta_description": "Salesian Province of Chennai - We, the Salesians of Don Bosco [SDB], are an international organization of men dedicated full time to the service of young people, especially those who are poorer and disadvantaged.",
+    "category": "Institutions",
+    "confidence": 0.5384615384615384,
+    "category_source": "predefined",
+    "category_reason": "Based on the website content analysis",
+    "ul_blocks": [
+      "<ul class=\"navbar-nav\"><li class=\"nav-item\"><a href=\"/home\">Home</a></li><li class=\"nav-item\"><a href=\"/about\">About</a></li></ul>",
+      "<ul class=\"services\"><li>Education Ministry</li><li>Youth Ministry</li><li>Social Ministry</li></ul>"
+    ],
+    "li_items": [
+      "Home",
+      "Who We Are",
+      "What We Do",
+      "Education Ministry",
+      "Youth Ministry",
+      "Parish Ministry",
+      "Social Ministry",
+      "Resources",
+      "Contact"
+    ],
+    "clean_text": "Salesian Province of Chennai (INM) Home Who We Are What We Do Education Ministry Youth Ministry Parish Ministry Social Ministry Resources Contact...",
+    "full_html_snippet": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"/>..."
+  };
+
+  const handleAnalyze = () => {
+    if (!url.trim()) return;
+   
+    setLoading(true);
+    setResult(null);
+   
+    // Simulate API call - Replace with your actual API endpoint
+    setTimeout(() => {
+      setResult(dummyData);
+      setLoading(false);
+    }, 2500);
+  };
+
+  const getConfidenceColor = (confidence) => {
+    if (confidence >= 0.7) return 'text-green-600 bg-green-50 border-green-200';
+    if (confidence >= 0.5) return 'text-amber-600 bg-amber-50 border-amber-200';
+    return 'text-orange-600 bg-orange-50 border-orange-200';
+  };
+
+  const getConfidenceLabel = (confidence) => {
+    if (confidence >= 0.7) return 'High Confidence';
+    if (confidence >= 0.5) return 'Medium Confidence';
+    return 'Low Confidence';
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <div className="max-w-7xl mx-auto p-6">
+        {/* Header */}
+        <div className="text-center mb-8 pt-8">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Globe className="text-blue-600" size={40} />
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Website Taxonomy Analyzer
+            </h1>
+          </div>
+          <p className="text-gray-600">Enter a URL to automatically categorize and analyze website content</p>
+        </div>
+
+        {/* Input Section */}
+        <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
+          <div className="flex gap-3">
+            <div className="flex-1 relative">
+              <Globe className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+              <input
+                type="url"
+                value={url}
+                onChange={(e) => setUrl(e.target.value)}
+                placeholder="https://example.com"
+                className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none text-lg"
+                onKeyPress={(e) => e.key === 'Enter' && handleAnalyze()}
+              />
+            </div>
+            <button
+              onClick={handleAnalyze}
+              disabled={loading || !url.trim()}
+              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+            >
+              {loading ? (
+                <>
+                  <Loader2 className="animate-spin" size={20} />
+                  Analyzing...
+                </>
+              ) : (
+                <>
+                  <Search size={20} />
+                  Analyze
+                </>
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Loading State */}
+        {loading && (
+          <div className="bg-white rounded-2xl shadow-lg p-12 text-center">
+            <Loader2 className="animate-spin mx-auto mb-4 text-blue-600" size={48} />
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">Processing Website</h3>
+            <p className="text-gray-600">Analyzing content and extracting taxonomy...</p>
+          </div>
+        )}
+
+        {/* Results */}
+        {result && !loading && (
+          <div className="space-y-6">
+            {/* Main Category Card */}
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex-1">
+                  <h2 className="text-2xl font-bold text-gray-800 mb-2">{result.title}</h2>
+                  <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                    <span className="flex items-center gap-1">
+                      <Globe size={16} />
+                      {result.url}
+                    </span>
+                  </div>
+                  <p className="text-gray-600">{result.meta_description}</p>
+                </div>
+              </div>
+
+              {/* Category Information */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Tag className="text-blue-600" size={24} />
+                    <span className="text-sm font-medium text-gray-600">Category</span>
+                  </div>
+                  <p className="text-2xl font-bold text-gray-800">{result.category}</p>
+                  <p className="text-xs text-gray-500 mt-1">Source: {result.category_source}</p>
+                </div>
+
+                <div className={`rounded-xl p-6 border ${getConfidenceColor(result.confidence)}`}>
+                  <div className="flex items-center gap-3 mb-2">
+                    <BarChart3 size={24} />
+                    <span className="text-sm font-medium">Confidence Score</span>
+                  </div>
+                  <p className="text-2xl font-bold">{(result.confidence * 100).toFixed(1)}%</p>
+                  <p className="text-xs mt-1">{getConfidenceLabel(result.confidence)}</p>
+                </div>
+
+                <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border border-purple-200">
+                  <div className="flex items-center gap-3 mb-2">
+                    <CheckCircle2 className="text-purple-600" size={24} />
+                    <span className="text-sm font-medium text-gray-600">Status</span>
+                  </div>
+                  <p className="text-2xl font-bold text-gray-800">Analyzed</p>
+                  <p className="text-xs text-gray-500 mt-1">Ready for integration</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Navigation Items */}
+            <div className="bg-white rounded-2xl shadow-lg p-6">
+              <div className="flex items-center gap-2 mb-4">
+                <List className="text-blue-600" size={24} />
+                <h3 className="text-xl font-bold text-gray-800">Navigation Structure</h3>
+                <span className="ml-auto text-sm text-gray-500">{result.li_items.length} items</span>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                {result.li_items.slice(0, 12).map((item, i) => (
+                  <div key={i} className="flex items-center gap-2 bg-gray-50 rounded-lg p-3 border border-gray-200">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <span className="text-sm text-gray-700 truncate">{item}</span>
+                  </div>
+                ))}
+              </div>
+              {result.li_items.length > 12 && (
+                <p className="text-sm text-gray-500 mt-3 text-center">
+                  + {result.li_items.length - 12} more items
+                </p>
+              )}
+            </div>
+
+            {/* Content Preview */}
+            <div className="bg-white rounded-2xl shadow-lg p-6">
+              <div className="flex items-center gap-2 mb-4">
+                <FileText className="text-blue-600" size={24} />
+                <h3 className="text-xl font-bold text-gray-800">Content Preview</h3>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 max-h-48 overflow-y-auto">
+                <p className="text-sm text-gray-700 leading-relaxed">
+                  {result.clean_text.substring(0, 500)}...
+                </p>
+              </div>
+            </div>
+
+            {/* HTML Blocks */}
+            <div className="bg-white rounded-2xl shadow-lg p-6">
+              <div className="flex items-center gap-2 mb-4">
+                <Code className="text-blue-600" size={24} />
+                <h3 className="text-xl font-bold text-gray-800">Detected UL Blocks</h3>
+                <span className="ml-auto text-sm text-gray-500">{result.ul_blocks.length} blocks</span>
+              </div>
+              <div className="space-y-3">
+                {result.ul_blocks.slice(0, 2).map((block, i) => (
+                  <div key={i} className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-xs font-medium text-gray-500">Block {i + 1}</span>
+                      <span className="text-xs text-gray-400">{block.length} characters</span>
+                    </div>
+                    <pre className="text-xs text-gray-600 overflow-x-auto whitespace-pre-wrap">
+                      {block.substring(0, 200)}...
+                    </pre>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Empty State */}
+        {!result && !loading && (
+          <div className="bg-white rounded-2xl shadow-lg p-12 text-center">
+            <Globe className="mx-auto mb-4 text-gray-300" size={64} />
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">Ready to Analyze</h3>
+            <p className="text-gray-600">Enter a website URL above to get started with taxonomy analysis</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}

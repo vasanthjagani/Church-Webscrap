@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://salesian.online/simple#Fam_SDB">
+    <rdf:type rdf:resource="http://salesian.online/simple#SalesianFamilyGroup"/>
+    <rdfs:label xml:lang="en">Salesians of Don Bosco</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#hasAreaOfReference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has area of reference</rdfs:label>
+    <rdfs:domain rdf:resource="http://salesian.online/simple#Document"/>
+    <rdfs:range rdf:resource="http://salesian.online/simple#AreaOfReference"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Area_History">
+    <rdf:type rdf:resource="http://salesian.online/simple#AreaOfReference"/>
+    <rdfs:label xml:lang="en">History</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_Source_DonBosco">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Source on Don Bosco</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Area_Spirituality">
+    <rdf:type rdf:resource="http://salesian.online/simple#AreaOfReference"/>
+    <rdfs:label xml:lang="en">Spirituality</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Fam_SalesianCooperators">
+    <rdf:type rdf:resource="http://salesian.online/simple#SalesianFamilyGroup"/>
+    <rdfs:label xml:lang="en">Association of Salesian Cooperators</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Document">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Document</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Theme_youth_ministry">
+    <rdf:type rdf:resource="http://salesian.online/simple#Theme"/>
+    <rdfs:label xml:lang="en">youth ministry</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#fileName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">file name</rdfs:label>
+    <rdfs:domain rdf:resource="http://salesian.online/simple#Document"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Theme_vocational_accompaniment">
+    <rdf:type rdf:resource="http://salesian.online/simple#Theme"/>
+    <rdfs:label xml:lang="en">vocational accompaniment</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Work_SocialWork">
+    <rdf:type rdf:resource="http://salesian.online/simple#WorkType"/>
+    <rdfs:label xml:lang="en">Social work</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#GeoArea">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Geographical area</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#WorkType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Type of work</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Fam_EntireSalesianFamily">
+    <rdf:type rdf:resource="http://salesian.online/simple#SalesianFamilyGroup"/>
+    <rdfs:label xml:lang="en">The entire Salesian Family</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_OfficialPublication">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Official publication</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#hasWorkType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has work type</rdfs:label>
+    <rdfs:domain rdf:resource="http://salesian.online/simple#Document"/>
+    <rdfs:range rdf:resource="http://salesian.online/simple#WorkType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_Image">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Image</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_Manual">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Manual</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Work_School">
+    <rdf:type rdf:resource="http://salesian.online/simple#WorkType"/>
+    <rdfs:label xml:lang="en">School</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#SalesianFamilyGroup">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Salesian Family group</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_Statistics">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Statistics</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Theme_SalesianFamily">
+    <rdf:type rdf:resource="http://salesian.online/simple#Theme"/>
+    <rdfs:label xml:lang="en">Salesian Family</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Work_VocationalSchool">
+    <rdf:type rdf:resource="http://salesian.online/simple#WorkType"/>
+    <rdfs:label xml:lang="en">Vocational school</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Fam_FMA">
+    <rdf:type rdf:resource="http://salesian.online/simple#SalesianFamilyGroup"/>
+    <rdfs:label xml:lang="en">Daughters of Mary Help of Christians</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_Source_SalesianFamily">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Source on the Salesian Family</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Work_HighSchool">
+    <rdf:type rdf:resource="http://salesian.online/simple#WorkType"/>
+    <rdfs:label xml:lang="en">High school</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Theme_adolescents">
+    <rdf:type rdf:resource="http://salesian.online/simple#Theme"/>
+    <rdfs:label xml:lang="en">adolescents</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#hasTheme">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has theme / tag</rdfs:label>
+    <rdfs:domain rdf:resource="http://salesian.online/simple#Document"/>
+    <rdfs:range rdf:resource="http://salesian.online/simple#Theme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Geo_Asia">
+    <rdf:type rdf:resource="http://salesian.online/simple#GeoArea"/>
+    <rdfs:label xml:lang="en">Asia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Area_Education">
+    <rdf:type rdf:resource="http://salesian.online/simple#AreaOfReference"/>
+    <rdfs:label xml:lang="en">Education</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Geo_AustraliaOceania">
+    <rdf:type rdf:resource="http://salesian.online/simple#GeoArea"/>
+    <rdfs:label xml:lang="en">Australia and Oceania</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Geo_EuropeMiddleEast">
+    <rdf:type rdf:resource="http://salesian.online/simple#GeoArea"/>
+    <rdfs:label xml:lang="en">Europe and Middle East</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#hasDocumentType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has document type</rdfs:label>
+    <rdfs:domain rdf:resource="http://salesian.online/simple#Document"/>
+    <rdfs:range rdf:resource="http://salesian.online/simple#DocumentType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Theme_spiritual_accompaniment">
+    <rdf:type rdf:resource="http://salesian.online/simple#Theme"/>
+    <rdfs:label xml:lang="en">spiritual accompaniment</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Work_BoardingSchool">
+    <rdf:type rdf:resource="http://salesian.online/simple#WorkType"/>
+    <rdfs:label xml:lang="en">Boarding school</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label xml:lang="en">Salesian.online Simple Taxonomy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Work_Nurseries">
+    <rdf:type rdf:resource="http://salesian.online/simple#WorkType"/>
+    <rdfs:label xml:lang="en">Nurseries</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#hasSummary">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has summary</rdfs:label>
+    <rdfs:domain rdf:resource="http://salesian.online/simple#Document"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Theme_DonBosco">
+    <rdf:type rdf:resource="http://salesian.online/simple#Theme"/>
+    <rdfs:label xml:lang="en">Don Bosco</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Area_Communication">
+    <rdf:type rdf:resource="http://salesian.online/simple#AreaOfReference"/>
+    <rdfs:label xml:lang="en">Communication</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Fam_VolunteersOfDonBosco">
+    <rdf:type rdf:resource="http://salesian.online/simple#SalesianFamilyGroup"/>
+    <rdfs:label xml:lang="en">Volunteers of Don Bosco</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_InformativeText">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Informative text</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_Letter_MotherGeneral">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Letter from the Mother General FMA</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_Multimedia">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Multimedia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Theme_young_people">
+    <rdf:type rdf:resource="http://salesian.online/simple#Theme"/>
+    <rdfs:label xml:lang="en">young people</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Theme_accompaniment">
+    <rdf:type rdf:resource="http://salesian.online/simple#Theme"/>
+    <rdfs:label xml:lang="en">accompaniment</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#sourceUrl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">source URL</rdfs:label>
+    <rdfs:domain rdf:resource="http://salesian.online/simple#Document"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_GoodPractice">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Good practice</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Work_ParishCatechesis">
+    <rdf:type rdf:resource="http://salesian.online/simple#WorkType"/>
+    <rdfs:label xml:lang="en">Parish catechesis</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Work_Oratory">
+    <rdf:type rdf:resource="http://salesian.online/simple#WorkType"/>
+    <rdfs:label xml:lang="en">Oratory</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Work_Parish">
+    <rdf:type rdf:resource="http://salesian.online/simple#WorkType"/>
+    <rdfs:label xml:lang="en">Parish</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#hasGeoArea">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has geographical area</rdfs:label>
+    <rdfs:domain rdf:resource="http://salesian.online/simple#Document"/>
+    <rdfs:range rdf:resource="http://salesian.online/simple#GeoArea"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_ScientificMonograph">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Scientific monograph</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#hasSalesianFamilyGroup">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has Salesian Family group</rdfs:label>
+    <rdfs:domain rdf:resource="http://salesian.online/simple#Document"/>
+    <rdfs:range rdf:resource="http://salesian.online/simple#SalesianFamilyGroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_Proceedings_SDBChapter">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Proceedings of the SDB General Chapter</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_Proceedings_FMAChapter">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Proceedings of the FMA General Chapter</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#DocumentType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Type of document</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Theme">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Theme / Tag</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Area_YouthMinistry">
+    <rdf:type rdf:resource="http://salesian.online/simple#AreaOfReference"/>
+    <rdfs:label xml:lang="en">Youth ministry</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Fam_PastPupils">
+    <rdf:type rdf:resource="http://salesian.online/simple#SalesianFamilyGroup"/>
+    <rdfs:label xml:lang="en">Past pupils</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Work_SalesianAssociations">
+    <rdf:type rdf:resource="http://salesian.online/simple#WorkType"/>
+    <rdfs:label xml:lang="en">Salesian associations</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Work_MissionsAdGentes">
+    <rdf:type rdf:resource="http://salesian.online/simple#WorkType"/>
+    <rdfs:label xml:lang="en">Missions ad Gentes</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Geo_India">
+    <rdf:type rdf:resource="http://salesian.online/simple#GeoArea"/>
+    <rdfs:label xml:lang="en">India</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_ScientificArticle">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Scientific article</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Geo_Africa">
+    <rdf:type rdf:resource="http://salesian.online/simple#GeoArea"/>
+    <rdfs:label xml:lang="en">Africa</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Area_Pedagogy">
+    <rdf:type rdf:resource="http://salesian.online/simple#AreaOfReference"/>
+    <rdfs:label xml:lang="en">Pedagogy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Area_ReligiousEducation">
+    <rdf:type rdf:resource="http://salesian.online/simple#AreaOfReference"/>
+    <rdfs:label xml:lang="en">Religious education</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#AreaOfReference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Area of reference</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#hasTitle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has title</rdfs:label>
+    <rdfs:domain rdf:resource="http://salesian.online/simple#Document"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Theme_loving_kindness">
+    <rdf:type rdf:resource="http://salesian.online/simple#Theme"/>
+    <rdfs:label xml:lang="en">loving kindness</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_Video">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Video</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_Study">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Study</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_Deliberations">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Deliberations</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Area_Catechesis">
+    <rdf:type rdf:resource="http://salesian.online/simple#AreaOfReference"/>
+    <rdfs:label xml:lang="en">Catechesis</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Area_Journalism">
+    <rdf:type rdf:resource="http://salesian.online/simple#AreaOfReference"/>
+    <rdfs:label xml:lang="en">Journalism</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_Letter_RectorMajor">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Letter from the Rector Major SDB</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Geo_Universal">
+    <rdf:type rdf:resource="http://salesian.online/simple#GeoArea"/>
+    <rdfs:label xml:lang="en">Universal-worldwide</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Work_HouseOfFormation">
+    <rdf:type rdf:resource="http://salesian.online/simple#WorkType"/>
+    <rdfs:label xml:lang="en">House of formation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_Speech">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Speech</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Theme_PreventiveSystem">
+    <rdf:type rdf:resource="http://salesian.online/simple#Theme"/>
+    <rdfs:label xml:lang="en">Preventive System</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Fam_ADMA">
+    <rdf:type rdf:resource="http://salesian.online/simple#SalesianFamilyGroup"/>
+    <rdfs:label xml:lang="en">Association of Mary Help of Christians</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Theme_family">
+    <rdf:type rdf:resource="http://salesian.online/simple#Theme"/>
+    <rdfs:label xml:lang="en">family</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_Audio">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Audio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Theme_SalesianSpirituality">
+    <rdf:type rdf:resource="http://salesian.online/simple#Theme"/>
+    <rdfs:label xml:lang="en">Salesian spirituality</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Area_Linguistics">
+    <rdf:type rdf:resource="http://salesian.online/simple#AreaOfReference"/>
+    <rdfs:label xml:lang="en">Linguistics</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Doc_Constitutions">
+    <rdf:type rdf:resource="http://salesian.online/simple#DocumentType"/>
+    <rdfs:label xml:lang="en">Constitutions</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Geo_America">
+    <rdf:type rdf:resource="http://salesian.online/simple#GeoArea"/>
+    <rdfs:label xml:lang="en">America</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Area_Training">
+    <rdf:type rdf:resource="http://salesian.online/simple#AreaOfReference"/>
+    <rdfs:label xml:lang="en">Training</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salesian.online/simple#Theme_educational_love">
+    <rdf:type rdf:resource="http://salesian.online/simple#Theme"/>
+    <rdfs:label xml:lang="en">educational love</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>
